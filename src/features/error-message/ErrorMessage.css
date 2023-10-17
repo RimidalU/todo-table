@@ -1,0 +1,10 @@
+.error-container {
+	position: absolute;
+	top: 45vh;
+	border: 1px solid rgb(206, 73, 73);
+	align-self: center;
+	padding: 3rem 15rem;
+	& h2 {
+		padding-bottom: 1rem;
+	}
+}
