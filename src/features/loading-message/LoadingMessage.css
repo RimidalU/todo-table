@@ -1,0 +1,6 @@
+.loading-message {
+	position: absolute;
+	top: 45vh;
+	align-self: center;
+	font-size: 2.5rem;
+}
