@@ -1,5 +1,22 @@
-import { FC, Fragment } from 'react';
-import './App.css';
+import { useGetPageDataQuery } from "./redux/api/interviewApi";
 
-const App: FC = () => <Fragment>Interview Page</Fragment>;
+import { ErrorMessage, Header, LoadingMessage, Table } from "./features";
+
+import { TODOS } from "./constants";
+
+import "./App.css";
+
+function App() {
+	const { error, isLoading } = useGetPageDataQuery(TODOS);
+
+	return (
+		<>
+			<Header />
+			<Table />
+			{isLoading && <LoadingMessage />}
+			{error && <ErrorMessage />}
+		</>
+	);
+}
+
 export default App;
